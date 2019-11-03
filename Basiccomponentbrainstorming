@@ -1,0 +1,40 @@
+
+//converter function for my various techs//
+function Tech(name, skill, turn) {
+  this.name = name;
+  this.skill = skill;
+  this.turn = turn;
+  this.updateTurn = function() {
+    return ++this.turn;
+  };
+}
+
+//database of tech skillset and data// 
+let person01 = new Tech("Cindy", 1, 0);
+let person02 = new Tech("Vi", 2, 0);
+let person03 = new Tech("Khoa", 2, 0);
+let person04 = new Tech("Pauline", 3, 0);
+let person05 = new Tech("Linh", 2, 0);
+let person06 = new Tech("Lee", 3, 0);
+let person07 = new Tech("John", 2, 0);
+let person08 = new Tech("David", 2, 0);
+let person09 = new Tech("Will", 1, 0);
+
+
+// turns in order of people coming in//
+let arr = [];
+arr.push(person01);
+arr.push(person03);
+arr.push(person02);
+arr.push(person04);
+arr.push(person05);
+arr.push(person06);
+arr.push(person07);
+arr.push(person08);
+arr.push(person09);
+
+person09.updateTurn();
+
+arr.filter(Tech.turn === 0: false) = current
+
+console.log(current);
