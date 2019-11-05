@@ -1,0 +1,55 @@
+
+
+
+ 
+//c
+function Tech(name, skill, turn) {
+  this.name = name;
+  this.skill = skill;
+  this.turn = turn;
+  this.updateTurn = function() {
+    return ++this.turn;
+  };
+}
+
+
+
+let person01 = new Tech("Cindy", 1, 0);
+let person02 = new Tech("Vi", 2, 0);
+let person03 = new Tech("Khoa", 2, 0);
+let person04 = new Tech("Pauline", 3, 4);
+let person05 = new Tech("Linh", 2, 5);
+let person06 = new Tech("Lee", 3, 6);
+let person07 = new Tech("John", 2, 7);
+let person08 = new Tech("David", 2, 8);
+let person09 = new Tech("Will", 1, 9);
+
+
+// turns in order of people coming in//
+let arr = [];
+arr.push(person01);
+arr.push(person03);
+arr.push(person02);
+arr.push(person04);
+arr.push(person05);
+arr.push(person06);
+arr.push(person07);
+arr.push(person08);
+arr.push(person09);
+
+//console.log(arr)
+//console.log(arr[0].turn)
+
+
+//const result = arr.filter(eachArr => eachArr.turn == 0)
+const result = arr.filter(eachArr => eachArr.turn == 0)
+
+
+const skill2 = arr.filter(eachArr => eachArr.skill == 2)
+
+const leastskill2 = skill2.filter(eachSkill2 => eachSkill2.turn == 0 )
+
+
+//console.log(skill2);
+
+console.log(leastskill2);
