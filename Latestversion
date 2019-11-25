@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <h1 class="screen">Home Page</h1>
+    </div>
+    <div id="container">
+        <h1>Mouse Events</h1>
+        <button id="btn1">Cindy</button>
+        <button id="btn2">Vi</button>
+        <button id="btn3">Khoa</button>
+        <button id="btn4">Pauline</button>
+        <button id="btn5">Linh</button>
+        <button id="btn6">Lee</button>
+        <button id="btn7">John</button>
+        <button id="btn8">David</button>
+        <button id="btn9">Will</button>
+        <button id="btn10">Print Array</button>
+        <button id="btn11">compute +1 turn</button>
+    </div>
+    <ul id="array">
+    </ul>
+   
+
+    <script>
+         
+            function Tech(name, skill, turn) {
+                this.name = name;
+                this.skill = skill;
+                this.turn = turn;
+                this.updateTurn = function () {
+                    return ++this.turn;
+                };
+            }
+
+                let person01 = new Tech("Cindy", 1, 0);
+                let person02 = new Tech("Vi", 2, 0);
+                let person03 = new Tech("Khoa", 2, 0);
+                let person04 = new Tech("Pauline", 3, 0);
+                let person05 = new Tech("Linh", 2, 0);
+                let person06 = new Tech("Lee", 3, 0);
+                let person07 = new Tech("John", 2, 0);
+                let person08 = new Tech("David", 2, 0);
+                let person09 = new Tech("Will", 1, 0);
+
+            let arr = [];
+
+            //confirm button
+
+            //for (let i = 0 ; i < arr.length; i++) {
+            //    (arr([0][2]) == 0) ? this.updateTurn : "Hello";
+            //}
+
+            $('#btn11').click(function() { arr[0] == 0 ? person01.updateTurn() : console.log("False")});
+            
+            $('#btn1').click(function(){
+                arr.push(person01.turn);
+                document.getElementById("array").innerHTML += "  Cindy |";
+            });
+            $('#btn2').click(function () {
+                arr.push(person02.turn);
+                document.getElementById("array").innerHTML += "  Vi |";
+            });
+            $('#btn3').click(function () {
+                arr.push(person03.turn);
+                document.getElementById("array").innerHTML += "  Khoa |";
+            });
+            $('#btn4').click(function () {
+                arr.push(person04.turn);
+                document.getElementById("array").innerHTML += "  Pauline |";
+            });
+            $('#btn5').click(function () {
+                arr.push(person05.turn);
+                document.getElementById("array").innerHTML += "  Linh |";
+            });
+            $('#btn6').click(function () {
+                arr.push(person06.turn);
+                document.getElementById("array").innerHTML += "  Lee |";
+            });
+            $('#btn7').click(function () {
+                arr.push(person07.turn);
+                document.getElementById("array").innerHTML += "  John |";
+            });
+            $('#btn8').click(function () {
+                arr.push(person08.turn);
+                document.getElementById("array").innerHTML += "  David |";
+            });
+            $('#btn9').click(function () {
+                arr.push(person09.turn);
+                document.getElementById("array").innerHTML += " Will |";
+            });
+            $('#btn10').click(function () {
+                console.log(arr);
+            });
+
+
+
+            
+
+
+    </script>
+</body>
+
+</html>
